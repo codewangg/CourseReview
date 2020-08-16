@@ -1,0 +1,33 @@
+<%- include('partials/header')%>
+    <nav class=navbar navbar-default>
+
+    </nav>
+<div class="container centered">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to Course Review!</h1>
+            <p>View our hand-picked courses from all over the school</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="courses/new">Add new Course</a>
+            </p>
+        </div>
+
+    </header>
+
+
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+        <% courses.forEach(function(course){ %>
+            <div class="col-md-3 col-sm-6 center-block text-center" >
+                <div class="thumbnail">
+                    <img src="<%= course.image%>">
+                    <div class="caption">
+                        <h4><%= course.name%></h4>
+                    </div>
+                </div>
+            </div>
+        <%});%>
+    </div>
+
+
+</div>
+<%- include('partials/footer')%>

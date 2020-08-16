@@ -1,0 +1,16 @@
+<%- include('partials/header')%>
+<div class="container">
+    <header class="jumbotron">
+        <h1>This is the courses page!</h1>
+    </header>
+
+
+    <% courses.forEach(function(course){ %>
+        <li>
+            <h4><%= course.name %></h4>
+            <img src="<%= course.image%>">
+            
+        </li>
+    <%});%>
+</div>
+<%- include('partials/footer')%>

@@ -1,0 +1,29 @@
+<%- include('partials/header')%>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to Course Review!</h1>
+            <p>View our hand-picked courses from all over the school</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="courses/new">Add new Course</a>
+            </p>
+        </div>
+
+    </header>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Our Most Popular Course</h3>
+        </div>
+    </div>
+
+    <% courses.forEach(function(course){ %>
+        <li>
+            <h4><%= course.name %></h4>
+            <img src="<%= course.image%>">
+            
+        </li>
+    <%});%>
+</div>
+<%- include('partials/footer')%>

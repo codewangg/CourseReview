@@ -1,0 +1,9 @@
+<%- include('partials/header')%>
+<h1>Create a new course</h1>
+<form action="/courses" method="POST">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="image" placeholder="Image URL">
+    <button>Submit!</button>
+</form>
+
+<%- include('partials/footer')%>

@@ -1,0 +1,12 @@
+<%- include('partials/header')%>
+<h1>This is the courses page!</h1>
+
+<% courses.forEach(function(course){ %>
+    <li>
+        <h4><%= course.name %></h4>
+        <img src="<%= course.image%>">
+        
+    </li>
+<%});%>
+
+<%- include('partials/footer')%>
